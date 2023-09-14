@@ -6,6 +6,7 @@ This project is intended to practice unsupervised machine learning to predict ho
 
 ## Table of Contents
 * Resources Folder
+  * Image Files Folder (images of all graphs)
   * crypto_market_data.csv (file that holds our cryptocurrency data)
 * Crypto_Clustering.ipynb (Jupyter Notebook file where code was written and processed)
 
