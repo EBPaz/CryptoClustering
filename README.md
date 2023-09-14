@@ -25,11 +25,19 @@ import warnings
 warnings.filterwarnings('ignore')
 
 ## Summary
-The crypto data from the csv was read into a Dataframe. This data was then scaled using the sklearn library with StandardScaler. That new scaled data was then placed into it's own Dataframe. Taking that dataframe, we plotted an Elbow Curve after looping through the data to test for the number of potential clusters up to 10.
+The crypto data from the csv was read into a Dataframe. This data was then scaled using the sklearn library with StandardScaler. That new scaled data was then placed into it's own Dataframe. Taking that dataframe, we plotted an Elbow Curve after looping through the data to test for the number of potential clusters up to 10. This graph indicates 4 is the correct value for K.
 
-![Elbow_Curve_K_Data](https://github.com/EBPaz/CryptoClustering/assets/131284675/e3352272-9511-4a25-b57a-f77f00f51b3c)
+![Elbow_Curve_K_Data](https://github.com/EBPaz/CryptoClustering/assets/131284675/e3352272-9511-4a25-b57a-f77f00f51b3c)  
+
+Next we ran the original data through the KMeans protocol with 4 clusters. We graphed those results in clusters and this is the result:
 
 
+We then re-assessed our original data with the PCA protocol. After creating a new Dataframe from the PCA calcuations, we then plotted another Elbow Curve with this data to re-assess K value. Here is the graph, it also indicated that 4 is a good K value.
+
+Finally, the PCA data was then run through the KMeans protocol and a final cluster map was created, still with 4 as the value of K. Here is the map.  
+
+
+Overall, both cluster graphs look similar with 2 more distinct clusters and then individual points making up the final 2 clusters. However, the PCA cluster graph has tighter circles of data within the 2 largest clusters. This indicates the PCA protocol can give you a better indication of what K value to use. 
 
 ## References
 
